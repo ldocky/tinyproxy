@@ -12,4 +12,4 @@ RUN apt-get autoremove -y && \
 EXPOSE 8888
 VOLUME /config
 
-CMD tail -f /dev/null
+CMD ["tinyproxy", "-d", "-c", "/config/tiny.conf"]
